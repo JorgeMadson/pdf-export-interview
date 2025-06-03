@@ -16,7 +16,7 @@ Therefore, you have to create a simple page that has a button, that triggers a b
 - The PDF URL that you can use is [`this url here`](https://sylla-dev-public-bucket.s3.eu-central-1.amazonaws.com/books/47f4cad9aa3c005ce22fbdef05545308495bd571c55e02f7ae69353ac831d787)
 - The user never sees this source URL
 - You have to define a table for these PDF exports
-- Download URL expires in 120 seconds
+- Download URL expires in 120 seconds (it can still be on the screen after 120 seconds, the download must fail when I click it after expiry)
 - As soon as the database is populated with this new PDF export, we have to update the UI to show the new Download URL
 
 **Doubts/questions**:
