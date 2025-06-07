@@ -14,7 +14,7 @@ export default function Home() {
             <br />
             <strong>Polling</strong>, <strong>Server-Sent Events (SSE)</strong>, and <strong>WebSockets</strong>.
             <br />
-            I've implemented the first two solutions for comparison. 
+            I&apos;ve implemented the first two solutions for comparison. 
             While WebSockets would work, it will add unnecessary complexity for this use case. 
             Feel free to test both available methods below.
           </p>

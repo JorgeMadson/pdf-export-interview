@@ -64,7 +64,7 @@ export function usePdfExport(method: ExportMethod) {
             setIsLoading(false)
             clearInterval(pollingInterval)
           }
-        } catch (err) {
+        } catch {
           setError("Failed to check export status")
           setIsLoading(false)
           clearInterval(pollingInterval)
@@ -109,7 +109,7 @@ export function usePdfExport(method: ExportMethod) {
     return () => {
       if (eventSource) eventSource.close()
     }
-  }, [method, exportId, isLoading])
+  }, [method, exportId, isLoading, eventSource])
 
   const requestPdfExport = useCallback(async () => {
     try {

@@ -3,7 +3,6 @@ import { Client } from "@upstash/qstash"
 import { db } from "@/db"
 import { pdfExports } from "@/db/schema"
 import { v4 as uuidv4 } from "uuid"
-import { stat } from "fs"
 
 // Initialize QStash client
 const qstash = new Client({
