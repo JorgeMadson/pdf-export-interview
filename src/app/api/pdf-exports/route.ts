@@ -1,13 +1,19 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { Client } from "@upstash/qstash"
-import { db } from "@/src/db"
-import { pdfExports } from "@/src/db/schema"
+import { db } from "@/db"
+import { pdfExports } from "@/db/schema"
 import { v4 as uuidv4 } from "uuid"
+import { stat } from "fs"
 
 // Initialize QStash client
 const qstash = new Client({
   token: process.env.QSTASH_TOKEN || "",
 })
+
+export function GET() {
+  // This endpoint is used to check if the API is working
+  return NextResponse.json({ message: "PDF Export API is working. Use the POST method." }, { status: 200 })
+}
 
 export async function POST(request: NextRequest) {
   try {

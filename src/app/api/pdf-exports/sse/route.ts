@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server"
-import { db } from "@/src/db"
-import { pdfExports } from "@/src/db/schema"
+import { db } from "@/db"
+import { pdfExports } from "@/db/schema"
 import { eq } from "drizzle-orm"
 
 // This endpoint is used for Server-Sent Events

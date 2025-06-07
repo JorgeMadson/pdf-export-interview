@@ -8,14 +8,14 @@ export default function Home() {
       <div className="max-w-4xl w-full space-y-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-2">Welcome back!</h1>
+          <span className="hidden text-4xl font-bold text-white mb-2">Boss :)</span>
           <p className="text-lg text-blue-100 text-center mx-auto">
             For event-driven file generation in web applications, there are three common approaches: 
             <br />
             <strong>Polling</strong>, <strong>Server-Sent Events (SSE)</strong>, and <strong>WebSockets</strong>.
             <br />
-            I've implemented the first 
-            two solutions for comparison. While WebSockets would work, it will add unnecessary 
-            complexity for this use case. 
+            I've implemented the first two solutions for comparison. 
+            While WebSockets would work, it will add unnecessary complexity for this use case. 
             Feel free to test both available methods below.
           </p>
         </div>

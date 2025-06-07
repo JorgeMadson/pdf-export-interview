@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { db } from "@/src/db"
-import { pdfExports } from "@/src/db/schema"
+import { db } from "@/db"
+import { pdfExports } from "@/db/schema"
 import { eq } from "drizzle-orm"
 import { generateTempUrl } from "@/lib/pdf-utils"
 
