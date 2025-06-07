@@ -14,9 +14,14 @@ export async function GET(request: NextRequest) {
       sourceUrl: string
     }
 
-    // Redirect to the source URL
-    // In a real-world scenario, you might want to proxy the request to hide the source URL
-    return NextResponse.redirect(decoded.sourceUrl)
+    // Proxy the request to hide the source URL
+    const response = await fetch(decoded.sourceUrl)
+    const blob = await response.blob()
+    const headers = new Headers(response.headers)
+    return new NextResponse(blob, {
+      status: response.status,
+      headers,
+    })
   } catch (error) {
     console.error("Error downloading PDF:", error)
 
