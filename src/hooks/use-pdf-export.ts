@@ -11,16 +11,6 @@ export function usePdfExport(method: ExportMethod) {
   const [expiresIn, setExpiresIn] = useState(120)
   const [exportId, setExportId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [eventSource, setEventSource] = useState<EventSource | null>(null)
-
-  // Cleanup function for SSE
-  useEffect(() => {
-    return () => {
-      if (eventSource) {
-        eventSource.close()
-      }
-    }
-  }, [eventSource])
 
   // Handle countdown timer for expiration
   useEffect(() => {
@@ -103,11 +93,9 @@ export function usePdfExport(method: ExportMethod) {
         sse.close()
       }
 
-      setEventSource(sse)
-    }
-
-    return () => {
-      if (eventSource) eventSource.close()
+      return () => {
+        sse.close();
+      }
     }
   }, [method, exportId, isLoading])
 
