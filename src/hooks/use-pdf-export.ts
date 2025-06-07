@@ -109,7 +109,7 @@ export function usePdfExport(method: ExportMethod) {
     return () => {
       if (eventSource) eventSource.close()
     }
-  }, [method, exportId, isLoading, eventSource])
+  }, [method, exportId, isLoading])
 
   const requestPdfExport = useCallback(async () => {
     try {
