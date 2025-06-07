@@ -53,10 +53,12 @@ export default function SSEPage() {
           )}
 
           {downloadUrl && isExpired && (
-            <Alert className="border-amber-400/30">
-              <AlertCircle className="h-4 w-4 text-amber-400" />
-              <AlertTitle className="text-amber-200">Link expired</AlertTitle>
-              <AlertDescription className="text-amber-300">
+            <Alert className="bg-white border-amber-300">
+              <AlertCircle className="h-4 w-4 text-amber-500" />
+              <AlertTitle className="text-amber-700 font-medium">
+                Link expired
+              </AlertTitle>
+              <AlertDescription className="text-amber-600">
                 The download link has expired. Please generate a new export.
               </AlertDescription>
             </Alert>
