@@ -5,7 +5,7 @@ import { eq } from "drizzle-orm"
 
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
-    const exportId = params.id
+      const { id: exportId } = await params
 
     // Get the export from the database using Drizzle
     const result = await db.select().from(pdfExports).where(eq(pdfExports.id, exportId)).limit(1)

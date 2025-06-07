@@ -33,7 +33,7 @@ export default function Home() {
               </div>
               <div className="flex items-start space-x-2">
                 <CheckCircle2 className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
-                <p>Less efficient with periodic server requests (every 2s)</p>
+                <p>More load on server with requests (every 2s)</p>
               </div>
               <p className="text-sm text-gray-300">
                 Traditional approach that checks the server at regular intervals.
