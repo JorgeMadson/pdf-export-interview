@@ -8,13 +8,15 @@ export default function Home() {
       <div className="max-w-4xl w-full space-y-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-2">Welcome back!</h1>
-          <p className="text-lg text-blue-100 text-center max-w-2xl mx-auto">
-            For PDF generation in web applications, there are three common approaches: 
-            Polling, Server-Sent Events (SSE), and WebSockets. 
+          <p className="text-lg text-blue-100 text-center mx-auto">
+            For event-driven file generation in web applications, there are three common approaches: 
+            <br />
+            <strong>Polling</strong>, <strong>Server-Sent Events (SSE)</strong>, and <strong>WebSockets</strong>.
             <br />
             I've implemented the first 
-            two solutions for comparison. While WebSockets would work, they add unnecessary 
-            complexity for this use case. Feel free to test both available methods below.
+            two solutions for comparison. While WebSockets would work, it will add unnecessary 
+            complexity for this use case. 
+            Feel free to test both available methods below.
           </p>
         </div>
 
