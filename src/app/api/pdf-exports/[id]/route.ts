@@ -3,9 +3,9 @@ import { db } from "@/db"
 import { pdfExports } from "@/db/schema"
 import { eq } from "drizzle-orm"
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET({ params }: { params: { id: string } }) {
   try {
-      const { id: exportId } = await params
+      const { id: exportId } = params
 
     // Get the export from the database using Drizzle
     const result = await db.select().from(pdfExports).where(eq(pdfExports.id, exportId)).limit(1)
